@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px;
+
+
+    &__link {
+        text-decoration: underline;
+        transition: all .3s ease-in-out;
+        &:hover {
+            color: violet;
+        }
+    }
+}

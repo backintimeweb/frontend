@@ -1,20 +1,12 @@
 import "./App.scss";
-import { useGetAllPostsQuery } from "./api/posts";
 import { Footer } from "./components/Footer.jsx/Footer";
+import { Header } from "./components/Header/Header";
 
 function App() {
-  const { data: postsData, isError: postError } = useGetAllPostsQuery();
   return (
     <>
+      <Header />
       <Footer />
-
-      {postsData
-        ? postsData.map((post) => (
-            <div key={post.id} value={post.id}>
-              {post.year}
-            </div>
-          ))
-        : null}
     </>
   );
 }
