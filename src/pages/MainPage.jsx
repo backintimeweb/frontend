@@ -6,18 +6,21 @@ import { useNavigate } from "react-router-dom";
 import { settings, years } from "../data/data";
 
 export const MainPage = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const onClickHandler = (year) => {
-    navigate(`/years/${year}`)
-  }
+    navigate(`/years/${year}`);
+  };
 
   return (
     <div className="slider-container">
       <Slider {...settings} className="slider">
         {years.map((elem, key) => (
-          <Card key={key} elem={elem} onClickHandler = {() => onClickHandler(elem)}/>
+          <Card
+            key={key}
+            elem={elem}
+            onClickHandler={() => onClickHandler(elem)}
+          />
         ))}
       </Slider>
     </div>
