@@ -1,1 +1,10 @@
 @import url("./utils/normalize.scss");
+
+.slider {
+    width: 100%;
+    cursor: grab;
+}
+
+.slick-arrow  {
+    display: none !important;
+}
