@@ -1,5 +1,8 @@
-import  logo2023  from '../assets/2023.png'
-export const years = [2023,2022,2021,2020]
+import logo2023 from "../assets/2023.png";
+import logo2022 from "../assets/2022.jpg";
+import logo2021 from "../assets/2021.png";
+import logo2020 from "../assets/2020.png";
+export const years = [2023, 2022, 2021, 2020];
 
 export const photos = [
   {
@@ -8,18 +11,15 @@ export const photos = [
   },
   {
     year: 2022,
-    photo:
-      "https://media.istockphoto.com/id/508544168/ru/фото/прозрачный-голубой-небесный-фон.jpg?s=612x612&w=0&k=20&c=IHTPoyjCzU9J-4-uTAD-O_6yH6bLC9Jp7pBO2Tc-HXE=",
+    photo: logo2022,
   },
   {
     year: 2021,
-    photo:
-      "https://media.istockphoto.com/id/508544168/ru/фото/прозрачный-голубой-небесный-фон.jpg?s=612x612&w=0&k=20&c=IHTPoyjCzU9J-4-uTAD-O_6yH6bLC9Jp7pBO2Tc-HXE=",
+    photo: logo2021,
   },
   {
     year: 2020,
-    photo:
-      "https://media.istockphoto.com/id/508544168/ru/фото/прозрачный-голубой-небесный-фон.jpg?s=612x612&w=0&k=20&c=IHTPoyjCzU9J-4-uTAD-O_6yH6bLC9Jp7pBO2Tc-HXE=",
+    photo: logo2020,
   },
 ];
 
