@@ -49,6 +49,7 @@ export const Card = ({ elem, onClickHandler }) => {
       {photo ? (
         <>
           <div className={`${s.card__year} anim`}>{elem}</div>
+          <div className={s.card__tag}>Нажми на карточку два раза</div>
           <img src={photo} className={s.card__img} />
           {/* <div className={s.card__tag}>*изображение сгенерировано нейросетью <a href="https://www.sberbank.com/promo/kandinsky/" style={{color: 'violet'}}>kandinsky</a></div> */}
         </>

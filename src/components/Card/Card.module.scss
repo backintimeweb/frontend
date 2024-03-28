@@ -10,10 +10,9 @@
 
   &__tag {
     position: absolute;
-    color: grey;
-    left: 10px;
-    bottom: 20px;
-    font-size: 12px;
+    color: white;
+    bottom: 10px;
+    font-size: 24px;
     z-index: 10;
   }
 
@@ -32,7 +31,7 @@
     opacity: 0;
 
     img {
-        position: absolute;
+      position: absolute;
     }
 
     &__background {
@@ -41,7 +40,7 @@
     }
 
     &__ground {
-        width: 300px;
+      width: 300px;
     }
   }
 }
