@@ -1,10 +1,25 @@
-export const years = [2023, 2022, 2021];
+import  logo2023  from '../assets/2023.png'
+export const years = [2023,2022,2021,2020]
 
 export const photos = [
   {
     year: 2023,
+    photo: logo2023,
+  },
+  {
+    year: 2022,
     photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Felis_silvestris_silvestris.jpg/1280px-Felis_silvestris_silvestris.jpg",
+      "https://media.istockphoto.com/id/508544168/ru/фото/прозрачный-голубой-небесный-фон.jpg?s=612x612&w=0&k=20&c=IHTPoyjCzU9J-4-uTAD-O_6yH6bLC9Jp7pBO2Tc-HXE=",
+  },
+  {
+    year: 2021,
+    photo:
+      "https://media.istockphoto.com/id/508544168/ru/фото/прозрачный-голубой-небесный-фон.jpg?s=612x612&w=0&k=20&c=IHTPoyjCzU9J-4-uTAD-O_6yH6bLC9Jp7pBO2Tc-HXE=",
+  },
+  {
+    year: 2020,
+    photo:
+      "https://media.istockphoto.com/id/508544168/ru/фото/прозрачный-голубой-небесный-фон.jpg?s=612x612&w=0&k=20&c=IHTPoyjCzU9J-4-uTAD-O_6yH6bLC9Jp7pBO2Tc-HXE=",
   },
 ];
 
@@ -422,4 +437,4 @@ export const desc = `
   
         <h3>Дальше - больше!</h3>
       </div>
-  `
+  `;

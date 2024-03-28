@@ -7,6 +7,7 @@
   padding: 10px;
 
   &__title {
+    transform: translateY(-500px);
     transition: all 0.3s ease-in-out;
     &:hover {
         color: violet;
@@ -14,8 +15,17 @@
   }
 
   &__list {
+    display: flex;
+    transform: translateY(-500px);
     &__link {
+      display: block;
       transition: all 0.3s ease-in-out;
+
+      &:last-child{
+        margin-left: 20px;
+      }
+
+
       &:hover {
         color: violet;
       }
@@ -23,6 +33,7 @@
   }
 
   &__social {
+    transform: translateY(-500px);
     display: flex;
     justify-content: center;
     align-items: flex-start;
