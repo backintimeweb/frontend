@@ -5,15 +5,15 @@ export const Telegram = () => {
       height="25"
       viewBox="0 0 20 20"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <linearGradient id="a" x1="66.67%" x2="41.67%" y1="16.67%" y2="75%">
-        <stop offset="0" stop-color="#37aee2" />
-        <stop offset="1" stop-color="#1e96c8" />
+        <stop offset="0" stopColor="#37aee2" />
+        <stop offset="1" stopColor="#1e96c8" />
       </linearGradient>
       <linearGradient id="b" x1="65.97%" x2="85.12%" y1="43.69%" y2="80.24%">
-        <stop offset="0" stop-color="#eff7fc" />
-        <stop offset="1" stop-color="#fff" />
+        <stop offset="0" stopColor="#eff7fc" />
+        <stop offset="1" stopColor="#fff" />
       </linearGradient>
       <circle cx="8" cy="8" fill="url(#a)" r="8" />
       <path

@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Card } from "../components/Card/Card";
 import { useNavigate } from "react-router-dom";
-import { settings, years } from "../data/data";
+import { sliderSettings, years } from "../data/data";
 
 export const MainPage = () => {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ export const MainPage = () => {
 
   return (
     <div className="slider-container">
-      <Slider {...settings} className="slider">
+      <Slider {...sliderSettings} className="slider">
         {years.map((elem, key) => (
           <Card
             key={key}

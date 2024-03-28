@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { photos } from "../../data/data";
 import s from "./Card.module.scss";
 
+
 export const Card = ({ elem, onClickHandler }) => {
   const [photo, setPhoto] = useState("");
 
