@@ -10,7 +10,7 @@
     transform: translateY(-500px);
     transition: all 0.3s ease-in-out;
     &:hover {
-        color: violet;
+      color: violet;
     }
   }
 
@@ -21,10 +21,9 @@
       display: block;
       transition: all 0.3s ease-in-out;
 
-      &:last-child{
+      &:last-child {
         margin-left: 20px;
       }
-
 
       &:hover {
         color: violet;

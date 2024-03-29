@@ -15,9 +15,9 @@ export const Header = () => {
 
   const onLoadFuncAnim = contextSafe(() => {
     let tl = gsap.timeline();
-    tl.to(`.${s.header__title}`, { duration: 1, y: 0 },"<")
-    .to(`.${s.header__list}`, { duration: 1, y: 0}, ">")
-    .to(`.${s.header__social}`, { duration: 1, y: 0 }, ">")
+    tl.to(`.${s.header__title}`, { duration: 1, y: 0 }, "<")
+      .to(`.${s.header__list}`, { duration: 1, y: 0 }, ">")
+      .to(`.${s.header__social}`, { duration: 1, y: 0 }, ">");
   });
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export const Header = () => {
   return (
     <header className={s.header} ref={container}>
       <NavLink to="/years" className={s.header__title} href="#">
-        Временной альманах
+        Альманах
       </NavLink>
 
       <div className={s.header__list}>

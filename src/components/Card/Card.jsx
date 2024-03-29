@@ -45,7 +45,6 @@ export const Card = ({ elem, onClickHandler }) => {
       className={s.card}
       onDoubleClick={() => {
         onNotLoadFuncAnim();
-
         setTimeout(() => onClickHandler(), 1500);
       }}
       ref={container}
