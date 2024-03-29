@@ -14,18 +14,22 @@ export const Card = ({ elem, onClickHandler }) => {
 
   const onLoadFuncAnim = contextSafe(() => {
     let tl = gsap.timeline();
-    tl.to(`.${s.card__img}`, { duration: 1, opacity: 1 }).to(".anim", {
-      duration: 1,
-      y: 0,
-    });
+    tl.to(`.${s.card__img}`, { duration: 1, opacity: 1 })
+      .to(".anim", {
+        duration: 1,
+        y: 0,
+      })
+      .to(`.${s.card__tag}`, { duration: 1, y: 0 });
   });
 
   const onNotLoadFuncAnim = contextSafe(() => {
     let tl = gsap.timeline();
-    tl.to(`.${s.card__img}`, { duration: 1, opacity: 0 }).to(".anim", {
-      duration: 1,
-      y: -500,
-    });
+    tl.to(`.${s.card__img}`, { duration: 1, opacity: 0 })
+      .to(".anim", {
+        duration: 1,
+        y: -500,
+      })
+      .to(`.${s.card__tag}`, { duration: 1, y: -500 });
   });
 
   useEffect(() => {
@@ -42,7 +46,7 @@ export const Card = ({ elem, onClickHandler }) => {
       onDoubleClick={() => {
         onNotLoadFuncAnim();
 
-        setTimeout(() => onClickHandler(), 1500)
+        setTimeout(() => onClickHandler(), 1500);
       }}
       ref={container}
     >

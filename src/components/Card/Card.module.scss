@@ -11,9 +11,12 @@
   &__tag {
     position: absolute;
     color: white;
+    right: 10px;
     bottom: 10px;
-    font-size: 24px;
+    font-size: 18px;
     z-index: 10;
+    transform: translateY(100px);
+    animation: shake 1s ease-in-out infinite alternate;
   }
 
   &__year {
@@ -42,5 +45,14 @@
     &__ground {
       width: 300px;
     }
+  }
+}
+
+@keyframes shake {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
