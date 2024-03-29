@@ -25,11 +25,6 @@ export const Card = ({ elem, onClickHandler }) => {
   const onNotLoadFuncAnim = contextSafe(() => {
     let tl = gsap.timeline();
     tl.to(`.${s.card__img}`, { duration: 1, opacity: 0 })
-      .to(".anim", {
-        duration: 1,
-        y: -500,
-      })
-      .to(`.${s.card__tag}`, { duration: 1, y: -500 });
   });
 
   useEffect(() => {

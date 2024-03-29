@@ -12,6 +12,10 @@
     &:hover {
       color: violet;
     }
+
+    @media (max-width: 525px) {
+      font-size: 12px;
+    }
   }
 
   &__list {
@@ -27,6 +31,23 @@
 
       &:hover {
         color: violet;
+      }
+    }
+
+    @media (max-width: 525px) {
+      &__link {
+        font-size: 12px;
+      }
+    }
+
+
+    @media (max-width: 406px) {
+      flex-direction: column;
+      &__link {
+        &:last-child {
+          margin-top: 5px;
+          margin-left: 0px;
+        }
       }
     }
   }
