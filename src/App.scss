@@ -64,14 +64,14 @@
     width: 100%;
   }
 
-  #notimlink {
+  .notimlink {
     display: inline-block;
     margin-right: 5px;
     margin-left: 5px;
     color: violet;
   }
 
-  a:not(#notimlink) {
+  a:not(.notimlink) {
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 10px;
