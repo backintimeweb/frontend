@@ -2,7 +2,6 @@ import logo2023 from "../assets/2023.png";
 import logo2022 from "../assets/2022.jpg";
 import logo2021 from "../assets/2021.png";
 import logo2020 from "../assets/2020.png";
-export const years = [2023, 2022, 2021, 2020];
 
 export const photos = [
   {
@@ -36,6 +35,3 @@ export const scrollOptions = {
   duration: 500,
   smooth: true,
 };
-
-
-export let fetchYear;

@@ -4,7 +4,6 @@ import { useState } from "react";
 import { animateScroll } from "react-scroll";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { scrollOptions } from "../data/data";
-import { useDispatch, useSelector } from "react-redux";
 import { useGetPostByIdQuery } from "../api/posts";
 import { getYear } from "../session";
 
