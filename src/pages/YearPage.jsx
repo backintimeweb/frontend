@@ -3,15 +3,19 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { animateScroll } from "react-scroll";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import { scrollOptions, desc } from "../data/data";
+import { scrollOptions } from "../data/data";
+import { useDispatch, useSelector } from "react-redux";
+import { useGetPostByIdQuery } from "../api/posts";
+import { getYear } from "../session";
 
 export const YearPage = () => {
   const [scroll, setScroll] = useState(0);
 
-  const loading = false;
-
-  const title = 2023;
-  const tags = "#чебурашка, #космос, #словопацана";
+  const {
+    data: postData,
+    isLoading,
+    isError,
+  } = useGetPostByIdQuery(getYear().year);
 
   const handleScroll = () => {
     setScroll(window.scrollY);
@@ -39,7 +43,7 @@ export const YearPage = () => {
         <ArrowUpwardIcon />
       </div>
 
-      {loading ? (
+      {!postData ? (
         <>
           <Skeleton
             variant="rounded"
@@ -71,9 +75,9 @@ export const YearPage = () => {
         </>
       ) : (
         <>
-          <h1>{title}</h1>
-          <div id="tags">{tags}</div>
-          <div dangerouslySetInnerHTML={createMarkup(desc)}></div>
+          <h1>{postData.title}</h1>
+          <div id="tags">{postData.tags}</div>
+          <div dangerouslySetInnerHTML={createMarkup(postData.desc)}></div>
         </>
       )}
     </div>

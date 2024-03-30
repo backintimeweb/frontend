@@ -15,10 +15,6 @@ export const Card = ({ elem, onClickHandler }) => {
   const onLoadFuncAnim = contextSafe(() => {
     let tl = gsap.timeline();
     tl.to(`.${s.card__img}`, { duration: 1, opacity: 1 })
-      .to(".anim", {
-        duration: 1,
-        y: 0,
-      })
       .to(`.${s.card__tag}`, { duration: 1, y: 0 });
   });
 
@@ -29,9 +25,9 @@ export const Card = ({ elem, onClickHandler }) => {
 
   useEffect(() => {
     const foundPhoto = photos.find((ph) => ph.year === elem);
-    if (foundPhoto) {
+    if (foundPhoto && elem) {
       setPhoto(foundPhoto.photo);
-      setTimeout(() => onLoadFuncAnim(), 100);
+      setTimeout(() => onLoadFuncAnim(), 200);
     }
   }, [elem]);
 

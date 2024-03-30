@@ -5,6 +5,7 @@ import { Telegram } from "../UI/telegram";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import { deleteYear } from "../../session";
 
 export const Header = () => {
   gsap.registerPlugin(useGSAP);
@@ -26,7 +27,7 @@ export const Header = () => {
 
   return (
     <header className={s.header} ref={container}>
-      <NavLink to="/years" className={s.header__title} href="#">
+      <NavLink to="/years" className={s.header__title} href="#" onClick={() => deleteYear()}>
         Альманах
       </NavLink>
 
