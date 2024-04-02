@@ -48,7 +48,7 @@ export const YearPage = () => {
         <ArrowUpwardIcon />
       </div>
 
-      {!postData && !postHtml ? (
+      {!postData ? (
         <>
           <Skeleton
             variant="rounded"
