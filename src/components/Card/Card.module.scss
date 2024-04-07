@@ -9,13 +9,11 @@
   color: white;
 
   &__tag {
-    position: absolute;
+    position: fixed;
     color: white;
-    right: 10px;
-    bottom: 10px;
-    font-size: 18px;
+    top: 52vh;
+    font-size: 24px;
     z-index: 10;
-    transform: translateY(100px);
     animation: shake 1s ease-in-out infinite alternate;
   }
 

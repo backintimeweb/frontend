@@ -15,7 +15,6 @@ export const Card = ({ elem, onClickHandler }) => {
   const onLoadFuncAnim = contextSafe(() => {
     let tl = gsap.timeline();
     tl.to(`.${s.card__img}`, { duration: 1, opacity: 1 })
-      .to(`.${s.card__tag}`, { duration: 1, y: 0 });
   });
 
   const onNotLoadFuncAnim = contextSafe(() => {
