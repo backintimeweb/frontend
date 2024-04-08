@@ -5,11 +5,10 @@ import { Card } from "../components/Card/Card";
 import { useNavigate } from "react-router-dom";
 import { sliderSettings} from "../data/data";
 import { useGetAllPostsQuery } from "../api/posts";
-import { useDispatch } from "react-redux";
+import { reverseList } from "../utils/helpers";
 
 export const MainPage = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch()
 
   const {data: years, isLoading, isError} = useGetAllPostsQuery()
 
@@ -22,7 +21,7 @@ export const MainPage = () => {
     <div className="slider-container">
       <Slider {...sliderSettings} className="slider">
 
-        {years ? years.map((elem, key) => (
+        {years ? reverseList([...years]).map((elem, key) => (
           <Card
             key={key}
             elem={elem.year}
