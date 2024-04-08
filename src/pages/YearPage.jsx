@@ -5,22 +5,24 @@ import { animateScroll } from "react-scroll";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { scrollOptions } from "../data/data";
 import { useGetPostByIdQuery, useGetPostHtmlByIdQuery } from "../api/posts";
-import { getYear } from "../session";
+import { useParams } from "react-router-dom";
 
 export const YearPage = () => {
   const [scroll, setScroll] = useState(0);
+
+  const { year } = useParams();
 
   const {
     data: postData,
     isLoading: loadingPost,
     isError: errorPost,
-  } = useGetPostByIdQuery(getYear().year);
+  } = useGetPostByIdQuery(year);
 
   const {
     data: postHtml,
     isLoading: loadingHtml,
-    isError: errorHtml
-  } = useGetPostHtmlByIdQuery(getYear().year)
+    isError: errorHtml,
+  } = useGetPostHtmlByIdQuery(year);
 
   const handleScroll = () => {
     setScroll(window.scrollY);
