@@ -2,30 +2,10 @@ import { NavLink } from "react-router-dom";
 import s from "./Header.module.scss";
 import { Vk } from "../UI/vk";
 import { Telegram } from "../UI/telegram";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { useEffect, useRef } from "react";
 
-export const Header = () => {
-  gsap.registerPlugin(useGSAP);
-
-  const container = useRef();
-
-  const { contextSafe } = useGSAP({ scope: container });
-
-  const onLoadFuncAnim = contextSafe(() => {
-    let tl = gsap.timeline();
-    tl.to(`.${s.header__title}`, { duration: 1, y: 0 }, "<")
-      .to(`.${s.header__list}`, { duration: 1, y: 0 }, ">")
-      .to(`.${s.header__social}`, { duration: 1, y: 0 }, ">");
-  });
-
-  useEffect(() => {
-    onLoadFuncAnim();
-  }, []);
-
+export const Header = ({active}) => {
   return (
-    <header className={s.header} ref={container}>
+    <header className={active ? `${s.header} ${s.active}`: s.header}>
       <NavLink to="/years" className={s.header__title} href="#">
         Альманах
       </NavLink>

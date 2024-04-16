@@ -1,13 +1,18 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid black;
-
-  padding: 10px;
+  display: block;
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  background-color: white;
+  z-index: 13;
+  transform: translateX(-1000px);
+  transition: all 0.3s ease-in-out;
 
   &__title {
-    transform: translateY(-500px);
+    display: block;
+    font-size: 36px;
+    margin-bottom: 40px;
     transition: all 0.3s ease-in-out;
     &:hover {
       color: violet;
@@ -19,43 +24,19 @@
   }
 
   &__list {
-    display: flex;
-    transform: translateY(-500px);
+    font-size: 16px;
     &__link {
       display: block;
       transition: all 0.3s ease-in-out;
-
-      &:last-child {
-        margin-left: 20px;
-      }
-
+      margin-bottom: 20px;
       &:hover {
         color: violet;
-      }
-    }
-
-    @media (max-width: 525px) {
-      &__link {
-        font-size: 12px;
-      }
-    }
-
-
-    @media (max-width: 406px) {
-      flex-direction: column;
-      &__link {
-        &:last-child {
-          margin-top: 5px;
-          margin-left: 0px;
-        }
       }
     }
   }
 
   &__social {
-    transform: translateY(-500px);
     display: flex;
-    justify-content: center;
     align-items: flex-start;
 
     margin-top: 10px;
@@ -79,4 +60,9 @@
       }
     }
   }
+}
+
+
+.active {
+  transform: translateX(0px);
 }
