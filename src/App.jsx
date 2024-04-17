@@ -12,9 +12,9 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header active={headerActive}/>
+        <Header active={headerActive} setHeader={setHeaderActive}/>
         <Routes>
-          <Route path="/years" Component={MainPage} />
+          <Route path="/years" Component={MainPage}/>
           <Route path="/years/:year" Component={YearPage} />
           <Route path="*" element={<Navigate to="/years" />} />
         </Routes>

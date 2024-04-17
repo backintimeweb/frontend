@@ -7,7 +7,7 @@ import { sliderSettings} from "../data/data";
 import { useGetAllPostsQuery } from "../api/posts";
 import { reverseList } from "../utils/helpers";
 
-export const MainPage = () => {
+export const MainPage = ({children}) => {
   const navigate = useNavigate();
 
   const {data: years, isLoading, isError} = useGetAllPostsQuery()

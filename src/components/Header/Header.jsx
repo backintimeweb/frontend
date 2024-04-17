@@ -2,11 +2,38 @@ import { NavLink } from "react-router-dom";
 import s from "./Header.module.scss";
 import { Vk } from "../UI/vk";
 import { Telegram } from "../UI/telegram";
+import { Cross } from "../UI/cross";
+import { useEffect, useRef } from "react";
 
-export const Header = ({active}) => {
+export const Header = ({ active, setHeader }) => {
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (headerRef.current && !headerRef.current.contains(event.target)) {
+        setHeader(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setHeader]);
+
   return (
-    <header className={active ? `${s.header} ${s.active}`: s.header}>
-      <NavLink to="/years" className={s.header__title} href="#">
+    <header
+      className={active ? `${s.header} ${s.active}` : s.header}
+      ref={headerRef}
+    >
+      <Cross onClickHander={() => setHeader(!active)} className={s.cross}/>
+      <NavLink
+        to="/years"
+        className={s.header__title}
+        href="#"
+        onClick={() => setHeader(!active)}
+      >
         Альманах
       </NavLink>
 
