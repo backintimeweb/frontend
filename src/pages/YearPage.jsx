@@ -5,10 +5,12 @@ import { animateScroll } from "react-scroll";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { scrollOptions } from "../data/data";
 import { useGetPostByIdQuery, useGetPostHtmlByIdQuery } from "../api/posts";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { ArrowBack } from "@mui/icons-material";
 
 export const YearPage = () => {
   const [scroll, setScroll] = useState(0);
+  const navigate = useNavigate()
 
   const { year } = useParams();
 
@@ -48,6 +50,13 @@ export const YearPage = () => {
         className={scroll < 300 ? "year__top" : "show year__top"}
       >
         <ArrowUpwardIcon />
+      </div>
+
+      <div
+        onClick={() => navigate("*")}
+        className={scroll < 300 ? "year__back" : "show year__back"}
+      >
+        <ArrowBack />
       </div>
 
       {!postData ? (

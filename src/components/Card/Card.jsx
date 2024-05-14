@@ -9,7 +9,6 @@ export const Card = ({ elem, onClickHandler }) => {
         onClickHandler();
       }}
     >
-      <img src={photos[elem]} alt={elem} className={s.card__img}/>
       <div className={s.card__year}>{elem}</div>
     </div>
   );

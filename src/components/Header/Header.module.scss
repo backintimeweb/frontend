@@ -18,7 +18,7 @@
     &:hover {
       
       & path {
-        fill: violet;
+        opacity: .7;
       }
     }
   }
@@ -29,7 +29,7 @@
     margin-bottom: 40px;
     transition: all 0.3s ease-in-out;
     &:hover {
-      color: violet;
+      opacity: .7;
     }
   }
 
@@ -40,7 +40,7 @@
       transition: all 0.3s ease-in-out;
       margin-bottom: 20px;
       &:hover {
-        color: violet;
+        opacity: .7;
       }
     }
   }

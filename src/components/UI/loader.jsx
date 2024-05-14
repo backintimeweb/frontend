@@ -2,8 +2,8 @@ export const Loader = ({width="50px", height="50px"}) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width={width} height={height}>
       <circle
-        fill="#EE82EE"
-        stroke="#EE82EE"
+        fill="rgb(42, 42, 42)"
+        stroke="rgb(42, 42, 42)"
         strokeWidth="15"
         r="15"
         cx="40"
@@ -20,8 +20,8 @@ export const Loader = ({width="50px", height="50px"}) => {
         ></animate>
       </circle>
       <circle
-        fill="#EE82EE"
-        stroke="#EE82EE"
+        fill="rgb(42, 42, 42)"
+        stroke="rgb(42, 42, 42)"
         strokeWidth="15"
         r="15"
         cx="100"
@@ -38,8 +38,8 @@ export const Loader = ({width="50px", height="50px"}) => {
         ></animate>
       </circle>
       <circle
-        fill="#EE82EE"
-        stroke="#EE82EE"
+        fill="rgb(42, 42, 42)"
+        stroke="rgb(42, 42, 42)"
         strokeWidth="15"
         r="15"
         cx="160"
