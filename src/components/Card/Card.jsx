@@ -1,4 +1,4 @@
-import { photos } from "../../data/data";
+
 import s from "./Card.module.scss";
 
 export const Card = ({ elem, onClickHandler }) => {
