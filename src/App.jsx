@@ -1,24 +1,22 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.scss";
-import { Header } from "./components/Header/Header";
 import { MainPage } from "./pages/MainPage";
 import { YearPage } from "./pages/YearPage";
-import { useState } from "react";
-import { Burger } from "./components/UI/burger";
+import { Footer } from "./components/Footer/Footer";
+import { AboutPage } from "./pages/AboutPage";
 
 function App() {
-  const [headerActive, setHeaderActive] = useState(false)
 
   return (
     <>
       <BrowserRouter>
-        <Header active={headerActive} setHeader={setHeaderActive}/>
         <Routes>
           <Route path="/years" Component={MainPage}/>
           <Route path="/years/:year" Component={YearPage} />
+          <Route path="/about" Component={AboutPage} />
           <Route path="*" element={<Navigate to="/years" />} />
         </Routes>
-        <Burger headerActive={headerActive} setHeader={setHeaderActive}/>
+        <Footer/>
       </BrowserRouter>
     </>
   );
