@@ -1,5 +1,6 @@
 import { Card } from "../components/Card/Card";
-import { useNavigate } from "react-router-dom";
+import InfoIcon from "@mui/icons-material/Info";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useGetAllPostsQuery } from "../api/posts";
 import { reverseList } from "../utils/helpers";
 import { Loader } from "../components/UI/loader";
@@ -16,7 +17,15 @@ export const MainPage = ({ children }) => {
 
   return (
     <div className="main">
-      <h2 className="main__title">Альманах</h2>
+      <div className="main__flexcont">
+        <h2 className="main__title">Альманах</h2>
+
+        <NavLink to="/about" className="main__about">
+          О проекте
+          <InfoIcon sx={{marginLeft: "10px"}}/>
+        </NavLink>
+      </div>
+
       {/* <input type="text" /> */}
       <div className="main__list">
         {years ? (
@@ -29,7 +38,7 @@ export const MainPage = ({ children }) => {
           ))
         ) : isLoading ? (
           <div className="main__loader">
-            <Loader width={"100px"} height="100px"/>
+            <Loader width={"100px"} height="100px" />
           </div>
         ) : null}
       </div>

@@ -2,7 +2,6 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import { MainPage } from "./pages/MainPage";
 import { YearPage } from "./pages/YearPage";
-import { Footer } from "./components/Footer/Footer";
 import { AboutPage } from "./pages/AboutPage";
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
           <Route path="/about" Component={AboutPage} />
           <Route path="*" element={<Navigate to="/years" />} />
         </Routes>
-        <Footer/>
       </BrowserRouter>
     </>
   );
