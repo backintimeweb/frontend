@@ -1,0 +1,14 @@
+.navbar {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+
+    &__list {
+        display: flex;
+
+        &__item {
+
+        }
+    }
+}

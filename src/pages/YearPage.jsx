@@ -7,6 +7,7 @@ import { scrollOptions } from "../data/data";
 import { useGetPostByIdQuery, useGetPostHtmlByIdQuery } from "../api/posts";
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowBack } from "@mui/icons-material";
+import { Navbar } from "../components/Navbar/Navbar";
 
 export const YearPage = () => {
   const [scroll, setScroll] = useState(0);
@@ -58,6 +59,8 @@ export const YearPage = () => {
       >
         <ArrowBack />
       </div>
+
+      {/* <Navbar /> */}
 
       {!postData ? (
         <>
