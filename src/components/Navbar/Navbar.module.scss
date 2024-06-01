@@ -1,14 +1,43 @@
 .navbar {
-    display: block;
-    position: fixed;
+  display: block;
+  position: fixed;
+  left: 0;
+  margin-top: 20px;
+  margin-left: 10px;
+
+  &__list {
+    &__item {
+      &__link {
+        display: block;
+        padding: 10px;
+        border: 1px solid rgb(42, 42, 42);
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+
+        &:hover,
+        &:focus-visible,
+        &:active {
+          background-color: rgb(42, 42, 42);
+          color: white;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 840px) {
     bottom: 0;
-    background-color: white;
+    text-align: center;
+    margin-top: 0;
 
     &__list {
         display: flex;
 
         &__item {
-
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
         }
     }
+  }
 }

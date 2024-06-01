@@ -60,7 +60,7 @@ export const YearPage = () => {
         <ArrowBack />
       </div>
 
-      {/* <Navbar /> */}
+      <Navbar />
 
       {!postData ? (
         <>
