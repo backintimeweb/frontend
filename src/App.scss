@@ -107,22 +107,22 @@
     color: rgb(42, 42, 42);
   }
 
-  // a:not(.notimlink) {
-  //   display: inline-block;
-  //   margin-top: 10px;
-  //   margin-bottom: 10px;
-  //   border-radius: 5px;
-  //   padding: 10px;
+  &__link {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
 
-  //   background-color: rgb(42, 42, 42);
-  //   color: white;
+    background-color: rgb(42, 42, 42);
+    color: white;
 
-  //   transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
-  //   &:hover {
-  //     opacity: 0.5;
-  //   }
-  // }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 
   p {
     margin-top: 15px;
